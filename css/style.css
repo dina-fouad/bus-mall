@@ -1,0 +1,39 @@
+.logo{
+    width: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+   
+}
+main section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px
+    
+
+}
+
+body {
+    width: 960px;
+    margin: auto;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 90px 1fr 50px;
+   
+}
+main img{
+    width: 185px;
+    margin-top: 50px;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    padding: 0 10px;
+   
+    
+}
+h2{
+   text-align: center; 
+}
