@@ -21,6 +21,7 @@ function Images(name){
   this.shown=0;
   this.votes=0;
   Images.all.push(this);
+  localStorage.setItem('images', JSON.stringify(Images.all));
 }
 
 
@@ -28,9 +29,25 @@ function Images(name){
 Images.all=[];
 
 
+
 for(let i=0 ; i< imgArr.length;i++){
   new Images(imgArr[i]);
 }
+
+
+
+function getData(){
+ let imgData =JSON.parse(localStorage.getItem('images'));
+ if (imgData){
+   Images.all=imgData;
+ }
+ }
+
+
+getData();
+renderImages();
+
+
 
 function renderImages(){
 
@@ -79,6 +96,7 @@ function clicker(event){
     voteNum++;
     renderImages();
   } else{
+   
     console.log(Images.all);
   }
 }
